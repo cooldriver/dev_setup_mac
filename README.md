@@ -8,6 +8,11 @@ A guide to setup a development environment on a new Mac.
 * [Dropbox](#dropbox)
 * [Browsers](#browsers)
 * [iTerm2](#iterm2)
+* [1 Password](#1-password)
+* [Alfred](#alfred)
+* [Vim](#vim)
+* [ZSH](#zsh)
+* [Homebrew](#homebrew)
 * [Inspiration](#inspiration)
 
 ## System update
@@ -59,6 +64,54 @@ You might want to repeat the process for your Ethernet interface.
 ## iTerm2
 
 * [Link](https://www.iterm2.com/downloads.html)
+
+## 1 Password
+
+* [Link](https://agilebits.com/onepassword)
+
+## Alfred
+
+* [Link](http://www.alfredapp.com/#download)
+* Sync with dropbox
+* Workflows:
+  * Caffeniate Control
+
+## Vim
+
+* Copy `.vimrc` to `~`
+
+## ZSH
+
+* [Link](https://github.com/robbyrussell/oh-my-zsh)
+* Copy `.zshrc` to `~`
+
+## Homebrew
+
+### Installation
+
+First, install XCode, then run the following command.
+
+```bash
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+One thing we need to do is tell the system to use programs installed by Hombrew (in `/usr/local/bin`) rather than the OS default if it exists. As ew use ZSH, we do this by checking if the file `.zshrc` has the following line (it should if you used the dotfile in this repos):
+
+```bash
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+```
+
+Open a new terminal tab with `Cmd+T` (you should also close the old one), then run the following command to make sure everything works:
+
+```bash
+$ brew doctor
+```
+
+Then update Homebrew's directory of formulae:
+
+```bash
+$ brew update
+```
 
 ## Inspiration
 
